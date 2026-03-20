@@ -42,7 +42,7 @@
         </p>
         <h2>2026 operational strategy</h2>
         <p>
-          Unity Industry is executing a <strong>platform-centric shift</strong>: expanding beyond the Editor to reach more users via Studio and Asset Manager. That shift supports a <strong>net-new logo</strong> sales motion with a more accessible SKU (noted at <strong>$799</strong> in the source doc).
+          Unity Industry is executing a <strong>platform-centric shift</strong>: expanding beyond the Editor to reach more users via Studio and Asset Manager. That shift supports a <strong>net-new logo</strong> sales motion with a more accessible SKU (noted at <strong>$799</strong>).
         </p>
       </div>
     </section>
@@ -60,12 +60,16 @@
             <div class="stat-label">Multi-year Asset Manager contracts (two high-profile customers)</div>
           </div>
           <div class="card">
-            <div class="stat">$9.1M</div>
+            <div class="stat">$13M</div>
             <div class="stat-label">Pipeline (AM, Studio, Asset Transformer) — as of March 2026</div>
           </div>
           <div class="card">
             <div class="stat">~$25M</div>
             <div class="stat-label">Expected 2026 pipeline (AM &amp; Studio); partners (e.g. BAH) add ~$5M on top</div>
+          </div>
+          <div class="card">
+            <div class="stat">7</div>
+            <div class="stat-label">New customers for Vue — VPC deployments</div>
           </div>
         </div>
         <p class="lead">Nearly all <strong>net new growth in 2026</strong> is projected from Asset Manager and Studio.</p>
@@ -93,15 +97,9 @@
         <h2>Pillar 1 — Fine-grained access control &amp; asset sharing</h2>
         <p><strong>Problem:</strong> RBAC is only at <em>project</em> level; customers cannot control access per asset or share cleanly. Called out as the most requested capability; <strong>BMW and Mercedes</strong> are waiting in 2026.</p>
         <p><strong>Direction:</strong> <strong>Plastic</strong> as storage to leverage file-/asset-level Plastic RBAC.</p>
-        <h3>Timeline (strategy doc)</h3>
-        <ul class="timeline">
-          <li><strong>June 2026</strong> — AM 2.0 Beta with Plastic-based fine-grained control for new VPC customers; staging AM 2.0 deployment to BMW.</li>
-          <li><strong>Q3 2026</strong> — Migrate existing VPC customers from AM 1.0 → AM 2.0 in production (BMW, AstraZeneca, Hitachi, Mercedes, etc.).</li>
-          <li><strong>Q4 2026</strong> — AM 2.0 public cloud release; migrate all users from AM 1.0 → AM 2.0.</li>
-        </ul>
         <h3>KPIs</h3>
         <ul class="clean">
-          <li>Cut median upload time for assets <strong>&gt;5GB by 50%</strong> vs. 2025 baseline <em>(blocked on AM 2.0 Alpha per doc)</em>.</li>
+          <li>Cut median upload time for assets <strong>&gt;5GB by 50%</strong> vs. 2025 baseline <em>(blocked on AM 2.0 Alpha)</em>.</li>
           <li><strong>&lt;1%</strong> transfer failure rate with <strong>≥95%</strong> successful resume for interrupted uploads.</li>
           <li>Stickiness (DAU/MAU) for activated users: <strong>[12.4]% → [20]%</strong>.</li>
           <li><strong>[30]%</strong> of active projects using custom or scoped permission roles.</li>
@@ -115,11 +113,6 @@
         <h2>Pillar 2 — Security, VPC &amp; on-prem deployability</h2>
         <p><strong>Context:</strong> ~<strong>95%</strong> of pipeline needs private cloud or on-prem. Public-cloud features are not always on VPC, with gaps in documentation. Goal: scalable deployment, self-deploy paths, and partner/SI onboarding (BAH, Globant, EPAM, resellers).</p>
         <p><strong>Direction:</strong> Simplify architecture (including Plastic, reducing dependencies e.g. MongoDB removal), new <strong>VPCTL</strong> deployment (Go-based) vs. Terraform — collectively <strong>AM 2.0</strong>.</p>
-        <h3>Timeline (strategy doc)</h3>
-        <ul class="timeline">
-          <li><strong>April 2026</strong> — VPCTL scripts to Mercedes; <strong>Unity Studio on VPC</strong>.</li>
-          <li><strong>June 2026</strong> — Queuing system; pipelines on UPA as actions; AM 2.0 Beta + BMW staging; <strong>SOC 2 Type II</strong> on trust site.</li>
-        </ul>
         <h3>KPIs</h3>
         <ul class="clean">
           <li>Support tickets: average <strong>&lt;[1] per customer</strong> (current: 0.4).</li>
@@ -134,11 +127,6 @@
         <h2>Pillar 3 — Pipeline automation &amp; Asset Transformer</h2>
         <p><strong>Value:</strong> Industry differentiation is ingesting many CAD formats via Asset Transformer on Pipeline Automation; <strong>customer-customizable pipelines</strong> drive adoption.</p>
         <p><strong>Direction:</strong> Continue UPA for VPC/on-prem; new actions in AM and AT apps; respond to UX feedback (e.g. moving pipelines across projects/orgs); implement pricing models from linked materials; update format support (HOOPS, Revit, Solidworks, etc.).</p>
-        <h3>Timeline (strategy doc)</h3>
-        <ul class="timeline">
-          <li><strong>June 2026</strong> — New <strong>consumption SKU</strong> for Asset Transformer SDK.</li>
-          <li><strong>TBD</strong> — AT license migration FlexLM → Unity License Server; updated HOOPS for new formats.</li>
-        </ul>
         <h3>KPIs</h3>
         <ul class="clean">
           <li><strong>5%</strong> of Industry-licensed orgs using custom pipelines (current: 0.03%).</li>
@@ -149,7 +137,7 @@
 
     <section class="slide">
       <div class="wrap">
-        <h2>References (from source)</h2>
+        <h2>References</h2>
         <ul class="clean">
           <li>Industry Program tracker &amp; initiatives view</li>
           <li>Industry Roadmap (Airtable)</li>

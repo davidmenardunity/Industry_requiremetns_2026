@@ -25,7 +25,7 @@
       <div class="wrap">
         <section class="hero">
           <h1>Scope of Work</h1>
-          <p class="subtitle">Feature-level requirements, priorities, owning teams, and target dates — as proposed in the UAMT Industry Requirement team proposal.</p>
+          <p class="subtitle">Feature-level requirements, priorities, owning teams, and target dates — UAMT Industry Requirements.</p>
           <div class="hero-meta">
             <span>Sign-off: Henning Linn, Sarah Lash, Etienne Whittom</span>
             <span>High-risk dates may shift after staffing plan</span>
@@ -38,7 +38,7 @@
       <div class="wrap">
         <div class="callout risk">
           <strong>Program risk</strong>
-          Per the source document, <em>all high-risk deliverables</em> need fresh estimates once staffing is finalized. Items below retain original <strong>risk callouts</strong> where the doc names them (e.g. BMW contract, public-cloud timing, AT onboarding cost).
+          <em>All high-risk deliverables</em> need fresh estimates once staffing is finalized. Items below include <strong>risk callouts</strong> where applicable (e.g. BMW contract, public-cloud timing, AT onboarding cost).
         </div>
       </div>
     </section>
@@ -83,7 +83,7 @@
                 <li>RBAC at single file, asset, and folder level</li>
                 <li>Onboard new VPC customers to AM 2.0 (not AM 1.0)</li>
               </ul>
-              <p class="risk-inline"><strong>Risk:</strong> Slippage puts <strong>BMW churn</strong> at risk (contract includes an exit clause per source doc).</p>
+              <p class="risk-inline"><strong>Risk:</strong> Slippage puts <strong>BMW churn</strong> at risk (contract includes an exit clause).</p>
             </article>
 
             <article class="deliverable">
@@ -169,21 +169,16 @@
 
             <article class="deliverable">
               <div class="deliverable-header">
-                <h4>Admin portal (VPC parity)</h4>
-                <span class="badge badge-p1">P1</span>
+                <h4>Unity Studio on VPC</h4>
+                <span class="badge badge-p0">P0</span>
               </div>
               <div class="meta-row">
                 <span><strong>Surface</strong> VPC</span>
-                <span><strong>Team</strong> Team 1</span>
-                <span><strong>Target</strong> June 30, 2026</span>
+                <span><strong>Team</strong> (not specified in table)</span>
+                <span><strong>Target</strong> April 30, 2026</span>
               </div>
-              <p>Consolidated admin for private cloud — mitigates Unity Dashboard gaps on VPC and aligns with public-cloud admin capabilities.</p>
               <ul class="req-list">
-                <li>Parity for org management, seats, RBAC, etc.</li>
-                <li>Multi-org management on VPC</li>
-                <li>User groups for VPC</li>
-                <li>Project deletion for VPC</li>
-                <li>Usage analytics exposed to customers</li>
+                <li>Unity Studio available on VPC</li>
               </ul>
             </article>
 
@@ -224,6 +219,26 @@
 
             <article class="deliverable">
               <div class="deliverable-header">
+                <h4>Admin portal (VPC parity)</h4>
+                <span class="badge badge-p1">P1</span>
+              </div>
+              <div class="meta-row">
+                <span><strong>Surface</strong> VPC</span>
+                <span><strong>Team</strong> Team 1</span>
+                <span><strong>Target</strong> June 30, 2026</span>
+              </div>
+              <p>Consolidated admin for private cloud — mitigates Unity Dashboard gaps on VPC and aligns with public-cloud admin capabilities.</p>
+              <ul class="req-list">
+                <li>Parity for org management, seats, RBAC, etc.</li>
+                <li>Multi-org management on VPC</li>
+                <li>User groups for VPC</li>
+                <li>Project deletion for VPC</li>
+                <li>Usage analytics exposed to customers</li>
+              </ul>
+            </article>
+
+            <article class="deliverable">
+              <div class="deliverable-header">
                 <h4>SOC 2 Type II</h4>
                 <span class="badge badge-p1">P1</span>
               </div>
@@ -235,21 +250,6 @@
               <p>Certification published for enterprise trust requirements.</p>
               <ul class="req-list">
                 <li>SOC 2 Type II available on trust.unity.com</li>
-              </ul>
-            </article>
-
-            <article class="deliverable">
-              <div class="deliverable-header">
-                <h4>Unity Studio on VPC</h4>
-                <span class="badge badge-p0">P0</span>
-              </div>
-              <div class="meta-row">
-                <span><strong>Surface</strong> VPC</span>
-                <span><strong>Team</strong> (not specified in table)</span>
-                <span><strong>Target</strong> April 30, 2026</span>
-              </div>
-              <ul class="req-list">
-                <li>Unity Studio available on VPC</li>
               </ul>
             </article>
           </div>
@@ -302,25 +302,6 @@
 
             <article class="deliverable">
               <div class="deliverable-header">
-                <h4>Asset Transformer ecosystem</h4>
-                <span class="badge badge-p2">P2</span>
-              </div>
-              <div class="meta-row">
-                <span><strong>Surface</strong> Public cloud &amp; VPC</span>
-                <span><strong>Team</strong> Team 4</span>
-                <span><strong>Target</strong> TBD</span>
-              </div>
-              <p>AT capabilities as customizable pipelines inside UPA.</p>
-              <ul class="req-list">
-                <li>Developer onboarding flows</li>
-                <li>Pipeline sharing; pipelines visible to Asset Manager</li>
-                <li>Author AT scripts in browser with live feedback on assets</li>
-              </ul>
-              <p class="risk-inline"><strong>Risk:</strong> Onboarding cost remains high (~<strong>$12k</strong> minimum buy-in per source).</p>
-            </article>
-
-            <article class="deliverable">
-              <div class="deliverable-header">
                 <h4>Asset Transformer consumption SKU</h4>
                 <span class="badge badge-p1">P1</span>
               </div>
@@ -334,7 +315,24 @@
                 <li>New consumption SKU for AT SDK</li>
                 <li>AT app in UPA on public cloud toggles consumption vs. licensed mode</li>
               </ul>
-              <p class="risk-inline"><strong>Risk:</strong> Doc cites ~<strong>$24k</strong> minimum buy-in for developers &amp; deployment — onboarding friction.</p>
+              <p class="risk-inline"><strong>Risk:</strong> ~<strong>$24k</strong> minimum buy-in for developers &amp; deployment — onboarding friction.</p>
+            </article>
+
+            <article class="deliverable">
+              <div class="deliverable-header">
+                <h4>AT licensing in Pipeline Automation</h4>
+                <span class="badge badge-p0">P0</span>
+              </div>
+              <div class="meta-row">
+                <span><strong>Surface</strong> VPC</span>
+                <span><strong>Team</strong> Pipeline Automation</span>
+                <span><strong>Target</strong> June 30, 2026</span>
+              </div>
+              <ul class="req-list">
+                <li>Correct license pooling and consumption tracking in the pipeline system</li>
+                <li>Admins add pooled licenses to orgs in private cloud</li>
+                <li>Pricing per linked framework</li>
+              </ul>
             </article>
 
             <article class="deliverable">
@@ -369,19 +367,21 @@
 
             <article class="deliverable">
               <div class="deliverable-header">
-                <h4>AT licensing in Pipeline Automation</h4>
-                <span class="badge badge-p0">P0</span>
+                <h4>Asset Transformer ecosystem</h4>
+                <span class="badge badge-p2">P2</span>
               </div>
               <div class="meta-row">
-                <span><strong>Surface</strong> VPC</span>
-                <span><strong>Team</strong> Pipeline Automation</span>
-                <span><strong>Target</strong> June 30, 2026</span>
+                <span><strong>Surface</strong> Public cloud &amp; VPC</span>
+                <span><strong>Team</strong> Team 4</span>
+                <span><strong>Target</strong> TBD</span>
               </div>
+              <p>AT capabilities as customizable pipelines inside UPA.</p>
               <ul class="req-list">
-                <li>Correct license pooling and consumption tracking in the pipeline system</li>
-                <li>Admins add pooled licenses to orgs in private cloud</li>
-                <li>Pricing per linked framework</li>
+                <li>Developer onboarding flows</li>
+                <li>Pipeline sharing; pipelines visible to Asset Manager</li>
+                <li>Author AT scripts in browser with live feedback on assets</li>
               </ul>
+              <p class="risk-inline"><strong>Risk:</strong> Onboarding cost remains high (~<strong>$12k</strong> minimum buy-in).</p>
             </article>
           </div>
         </section>
