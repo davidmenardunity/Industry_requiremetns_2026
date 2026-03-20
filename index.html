@@ -9,69 +9,88 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="inner">
-      <a class="brand" href="index.html">Industry Requirements 2026</a>
-      <nav class="nav-pages" aria-label="Presentation sections">
-        <a href="index.html" aria-current="page">Overview</a>
-        <a href="executive-summary.html">Strategy &amp; KPIs</a>
-        <a href="engineering-roadmap.html">Engineering roadmap</a>
-      </nav>
-    </div>
+<body class="is-presentation">
+  <header class="deck-chrome">
+    <a class="brand" href="index.html">Industry Requirements 2026</a>
+    <nav class="chapter-nav" aria-label="Deck chapters">
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="executive-summary.html">Strategy &amp; KPIs</a>
+      <a href="engineering-roadmap.html">Scope of Work</a>
+      <span class="slide-counter" data-slide-counter aria-live="polite">1 / 3</span>
+    </nav>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>Unity Industry — 2026 Requirements</h1>
-      <p class="subtitle">
-        Consolidated summary for engineering and cross-functional alignment: strategy context, customer barriers, measurable outcomes, and dated deliverables.
-      </p>
-      <div class="hero-meta">
-        <span>Sources: Industry Requirements 2026 (strategy) + Team proposal (resourcing)</span>
-        <span>Status: Under review</span>
+  <div class="deck" tabindex="0" aria-label="Slide deck — use arrow keys or scroll">
+    <section class="slide slide--title">
+      <div class="wrap">
+        <section class="hero">
+          <h1>Unity Industry — 2026 Requirements</h1>
+          <p class="subtitle">
+            Consolidated summary for engineering and cross-functional alignment: strategy context, customer barriers, measurable outcomes, and dated deliverables.
+          </p>
+          <div class="hero-meta">
+            <span>Sources: Industry Requirements 2026 (strategy) + Team proposal (resourcing)</span>
+            <span>Status: Under review</span>
+          </div>
+        </section>
       </div>
     </section>
 
-    <p class="lead">
-      Two documents inform this pack: a <strong>strategy brief</strong> (context, pipeline, pillars, KPIs, timelines) and a <strong>resourcing / delivery proposal</strong> (feature-level requirements, teams, target dates, and risk callouts). Use the pages below in order for a typical engineering review, or jump straight to the roadmap for planning.
-    </p>
-
-    <div class="nav-cards">
-      <a class="nav-card" href="executive-summary.html">
-        <h3>Strategy &amp; KPIs</h3>
-        <p>2026 operational plan, revenue context, adoption barriers, three strategic pillars with proposed solutions, milestones, and success metrics.</p>
-      </a>
-      <a class="nav-card" href="engineering-roadmap.html">
-        <h3>Engineering roadmap</h3>
-        <p>Prioritized deliverables by theme: AM 2.0 &amp; sharing, VPC / on-prem &amp; admin parity, pipeline automation &amp; Asset Transformer — with teams and dates.</p>
-      </a>
-    </div>
-
-    <div class="callout risk">
-      <strong>Risk note (from resourcing doc)</strong>
-      High-risk items may need <em>re-estimation after staffing settles</em>. Contract and customer churn risks (e.g. BMW) are called out on specific milestones — see the roadmap page for inline flags.
-    </div>
-
-    <h2>At a glance — three pillars</h2>
-    <div class="grid-2">
-      <div class="card">
-        <h3>Fine-grained access &amp; sharing</h3>
-        <p>Move beyond project-level RBAC: single-asset control and sharing (Plastic-backed AM 2.0), staging for key automotive customers, then VPC migration and public cloud GA.</p>
+    <section class="slide">
+      <div class="wrap">
+        <h2>How to use this deck</h2>
+        <p class="lead">
+          Two documents inform this pack: a <strong>strategy brief</strong> (context, pipeline, pillars, KPIs, timelines) and a <strong>resourcing / delivery proposal</strong> (feature-level requirements, teams, target dates, and risk callouts). Advance with <kbd>↓</kbd> <kbd>Space</kbd> or scroll; open the next chapter when you are ready.
+        </p>
+        <ul class="agenda-list">
+          <li>
+            <strong>Next — Strategy &amp; KPIs</strong>
+            <a href="executive-summary.html">Open chapter 2 →</a>
+            <span>2026 operational plan, revenue context, adoption barriers, three strategic pillars, milestones, and success metrics.</span>
+          </li>
+          <li>
+            <strong>Then — Scope of Work</strong>
+            <a href="engineering-roadmap.html">Open chapter 3 →</a>
+            <span>Prioritized deliverables by theme with teams and dates.</span>
+          </li>
+        </ul>
       </div>
-      <div class="card">
-        <h3>VPC, on-prem &amp; security</h3>
-        <p>Deployment simplification (VPCTL), admin parity with public cloud, faster public/VPC parity, SOC 2 Type II, Studio on VPC — aligned to how Industry pipeline actually sells.</p>
-      </div>
-      <div class="card">
-        <h3>Pipeline automation &amp; AT</h3>
-        <p>UPA queuing and license behavior on VPC, migration of built-in workflows, consumption SKU, licensing integration, and continued format support (e.g. HOOPS).</p>
-      </div>
-    </div>
+    </section>
 
-    <p class="footer-note">
-      Built from extracted text of <em>Industry Requirements 2026</em> documents. Open these HTML files locally in a browser; no build step required. For print or PDF, use the browser print dialog.
-    </p>
-  </main>
+    <section class="slide">
+      <div class="wrap">
+        <h2>At a glance — three pillars</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Fine-grained access &amp; sharing</h3>
+            <p>Move beyond project-level RBAC: single-asset control and sharing (Plastic-backed AM 2.0), staging for key automotive customers, then VPC migration and public cloud GA.</p>
+          </div>
+          <div class="card">
+            <h3>VPC, on-prem &amp; security</h3>
+            <p>Deployment simplification (VPCTL), admin parity with public cloud, faster public/VPC parity, SOC 2 Type II, Studio on VPC — aligned to how Industry pipeline actually sells.</p>
+          </div>
+          <div class="card">
+            <h3>Pipeline automation &amp; AT</h3>
+            <p>UPA queuing and license behavior on VPC, migration of built-in workflows, consumption SKU, licensing integration, and continued format support (e.g. HOOPS).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="wrap">
+        <h2>Colophon</h2>
+        <p class="lead">
+          Built from extracted text of <em>Industry Requirements 2026</em> documents. Open these HTML files locally in a browser; no build step required. For print or PDF, use the browser print dialog.
+        </p>
+        <p class="footer-note">
+          <a href="executive-summary.html">Continue to Strategy &amp; KPIs →</a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <p class="deck-hint" aria-hidden="true">↓ Space · next slide · Home / End</p>
+  <script src="presentation.js"></script>
 </body>
 </html>

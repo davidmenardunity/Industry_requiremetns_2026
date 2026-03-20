@@ -41,6 +41,331 @@ body {
   min-height: 100vh;
 }
 
+/* —— Presentation deck (full-viewport slides) —— */
+body.is-presentation {
+  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #0c1222;
+}
+
+.deck-chrome {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1.25rem;
+  background: rgba(12, 18, 34, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8125rem;
+  color: #94a3b8;
+}
+
+.deck-chrome .brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.deck-chrome .brand:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.deck-chrome .chapter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.75rem;
+  justify-content: flex-end;
+}
+
+.deck-chrome .chapter-nav a {
+  color: #94a3b8;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+.deck-chrome .chapter-nav a:hover {
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+}
+.deck-chrome .chapter-nav a[aria-current="page"] {
+  color: #fff;
+  background: rgba(59, 130, 246, 0.35);
+}
+
+.deck-chrome .slide-counter {
+  font-variant-numeric: tabular-nums;
+  color: #64748b;
+  margin-left: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.deck-hint {
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  bottom: 0.65rem;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.65);
+  pointer-events: none;
+  user-select: none;
+}
+
+.deck {
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 3rem;
+  outline: none;
+}
+
+.slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding: 4.25rem 1.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+}
+
+.slide:nth-child(odd) {
+  background: linear-gradient(165deg, #0f172a 0%, #111827 50%, #0f172a 100%);
+  color: #e2e8f8;
+}
+
+.slide:nth-child(even) {
+  background: linear-gradient(165deg, #111c2e 0%, #0c1424 50%, #111c2e 100%);
+  color: #e2e8f8;
+}
+
+.slide .wrap {
+  max-width: 56rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+}
+
+.slide h2 {
+  color: #f1f5f9;
+  border-bottom-color: rgba(148, 163, 184, 0.35);
+}
+
+.slide h3 {
+  color: #f1f5f9;
+}
+
+.slide .lead {
+  color: #cbd5e1;
+}
+
+.slide .wrap > p,
+.slide .pillar p,
+.slide .deliverable p {
+  color: #cbd5e1;
+}
+
+.slide .hero h1,
+.slide .hero .subtitle,
+.slide .hero .hero-meta {
+  color: #f1f5f9;
+}
+
+.slide .card {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.slide .card p,
+.slide .card .stat-label {
+  color: #94a3b8;
+}
+
+.slide .stat {
+  color: #93c5fd;
+}
+
+.slide .deliverable {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.slide .meta-row {
+  color: #94a3b8;
+}
+
+.slide .req-list {
+  color: #cbd5e1;
+}
+
+.slide .pillar-title {
+  color: #f1f5f9;
+}
+
+.slide .deliverable-header h4 {
+  color: #f1f5f9;
+}
+
+.slide .footer-note {
+  border-top-color: rgba(255, 255, 255, 0.12);
+  color: #64748b;
+}
+
+.slide .footer-note a {
+  color: #93c5fd;
+}
+
+.slide .timeline {
+  border-left-color: rgba(148, 163, 184, 0.4);
+}
+
+.slide .timeline li::before {
+  border-color: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.35);
+}
+
+.slide ul.clean li {
+  color: #cbd5e1;
+}
+
+.slide .callout {
+  background: rgba(59, 130, 246, 0.15);
+  border-left-color: #60a5fa;
+  color: #e2e8f0;
+}
+
+.slide .callout.risk {
+  background: linear-gradient(
+    145deg,
+    rgba(55, 22, 8, 0.94) 0%,
+    rgba(92, 38, 12, 0.9) 50%,
+    rgba(69, 26, 6, 0.92) 100%
+  );
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  border-left: 4px solid #f59e0b;
+  color: #fde68a;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.slide .callout.risk strong {
+  color: #fffbeb;
+}
+
+.slide .nav-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.slide .nav-card:hover {
+  border-color: #60a5fa;
+}
+.slide .nav-card h3 {
+  color: #93c5fd;
+}
+.slide .nav-card p {
+  color: #94a3b8;
+}
+
+.slide--long {
+  justify-content: flex-start;
+  padding-top: 4.5rem;
+}
+
+.slide .hero {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.slide--title .hero {
+  margin-bottom: 1.5rem;
+}
+
+.agenda-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.agenda-list li {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+}
+
+.agenda-list strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: #93c5fd;
+  margin-bottom: 0.35rem;
+}
+
+.agenda-list a {
+  color: #e2e8f0;
+  font-weight: 500;
+  text-decoration: none;
+}
+.agenda-list a:hover {
+  text-decoration: underline;
+}
+
+.agenda-list span {
+  display: block;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+kbd {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+}
+
+@media (max-width: 640px) {
+  .deck-chrome {
+    flex-wrap: wrap;
+    padding: 0.5rem 0.75rem;
+  }
+  .deck-chrome .slide-counter {
+    width: 100%;
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
@@ -293,7 +618,7 @@ ul.clean li {
   color: var(--p2);
 }
 
-/* Deliverable cards (roadmap) */
+/* Deliverable cards (Scope of Work deck) */
 .pillar {
   margin: 2.5rem 0;
 }
@@ -368,6 +693,22 @@ ul.clean li {
   border-radius: 6px;
 }
 
+.slide .risk-inline {
+  color: #fde68a;
+  background: linear-gradient(
+    145deg,
+    rgba(48, 20, 6, 0.92) 0%,
+    rgba(78, 32, 10, 0.88) 100%
+  );
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-left: 3px solid #ea580c;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.slide .risk-inline strong {
+  color: #fffbeb;
+}
+
 /* Link cards on index */
 .nav-cards {
   display: grid;
@@ -420,5 +761,83 @@ ul.clean li {
   }
   .deliverable {
     break-inside: avoid;
+  }
+
+  body.is-presentation {
+    min-height: 0;
+    height: auto;
+    overflow: visible;
+    background: #fff;
+  }
+
+  .deck-hint,
+  .deck-chrome .slide-counter {
+    display: none;
+  }
+
+  .deck-chrome {
+    position: static;
+    background: #fff;
+    color: #334155;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .deck-chrome .brand {
+    color: #0f172a;
+  }
+
+  .deck-chrome .chapter-nav a {
+    color: #475569;
+  }
+
+  .deck {
+    height: auto;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .slide {
+    min-height: auto;
+    padding: 1rem 0;
+    page-break-after: always;
+    background: #fff !important;
+    color: #0f172a !important;
+  }
+
+  .slide h2,
+  .slide h3,
+  .slide .pillar-title {
+    color: #0f172a !important;
+  }
+
+  .slide .card,
+  .slide .deliverable {
+    background: #fff !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #0f172a !important;
+  }
+
+  .slide .callout.risk {
+    background: #fffbeb !important;
+    border: 1px solid #fcd34d !important;
+    border-left: 4px solid #d97706 !important;
+    color: #78350f !important;
+    box-shadow: none !important;
+  }
+
+  .slide .callout.risk strong {
+    color: #451a03 !important;
+  }
+
+  .slide .risk-inline {
+    background: #fffbeb !important;
+    border: 1px solid #fcd34d !important;
+    border-left: 3px solid #d97706 !important;
+    color: #78350f !important;
+    box-shadow: none !important;
+  }
+
+  .slide .risk-inline strong {
+    color: #451a03 !important;
   }
 }
