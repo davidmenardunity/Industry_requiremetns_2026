@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engineering roadmap — Industry 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Industry Requirements 2026</a>
+      <nav class="nav-pages" aria-label="Presentation sections">
+        <a href="index.html">Overview</a>
+        <a href="executive-summary.html">Strategy &amp; KPIs</a>
+        <a href="engineering-roadmap.html" aria-current="page">Engineering roadmap</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Engineering roadmap &amp; resourcing view</h1>
+      <p class="subtitle">Feature-level requirements, priorities, owning teams, and target dates — as proposed in the UAMT Industry Requirement team proposal.</p>
+      <div class="hero-meta">
+        <span>Sign-off: Henning Linn, Sarah Lash, Etienne Whittom</span>
+        <span>High-risk dates may shift after staffing plan</span>
+      </div>
+    </section>
+
+    <div class="callout risk">
+      <strong>Program risk</strong>
+      Per the source document, <em>all high-risk deliverables</em> need fresh estimates once staffing is finalized. Items below retain original <strong>risk callouts</strong> where the doc names them (e.g. BMW contract, public-cloud timing, AT onboarding cost).
+    </div>
+
+    <!-- Pillar: AM 2.0 & sharing -->
+    <section class="pillar" id="am2">
+      <h2 class="pillar-title">1 · Fine-grained access control &amp; asset sharing (AM 2.0)</h2>
+      <div class="deliverables">
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>AM 2.0 Alpha</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 2</span>
+            <span><strong>Target</strong> April 30, 2026</span>
+          </div>
+          <p>Internal alpha for PlasticSCM-based storage; validate new storage approach before broader rollout.</p>
+          <ul class="req-list">
+            <li>Single-asset RBAC and sharing demo-able to customers for feedback</li>
+            <li>AM 2.0 storage migrated to Plastic</li>
+          </ul>
+          <p class="risk-inline"><strong>Risk:</strong> Team shuffling may jeopardize this date — reassess after teams settle.</p>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>AM 2.0 Beta — granular access control</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 2</span>
+            <span><strong>Target</strong> June 30, 2026</span>
+          </div>
+          <p>Beta of AM 2.0 with Plastic-based fine-grained control for <strong>new VPC customers</strong> — core requirement vs. project-only RBAC.</p>
+          <ul class="req-list">
+            <li>Staging: single-asset RBAC and sharing deployed for <strong>BMW</strong></li>
+            <li>RBAC at single file, asset, and folder level</li>
+            <li>Onboard new VPC customers to AM 2.0 (not AM 1.0)</li>
+          </ul>
+          <p class="risk-inline"><strong>Risk:</strong> Slippage puts <strong>BMW churn</strong> at risk (contract includes an exit clause per source doc).</p>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>Onboarding — Asset Sharing 2.0</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 2</span>
+            <span><strong>Target</strong> June 30, 2026</span>
+          </div>
+          <p>Improved flows for sharing assets (licensing and UX).</p>
+          <ul class="req-list">
+            <li>Licensing requirements implemented</li>
+            <li>Single files shareable publicly or privately by email</li>
+            <li>Google Drive–like sharing panel</li>
+            <li>Users manage or request licenses in context inside Asset Manager</li>
+          </ul>
+          <p class="risk-inline"><strong>Risk:</strong> Not planned for AM 1.0 (public cloud) until <strong>2027</strong> — impacts public-cloud customers (e.g. Toyota).</p>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>AM 2.0 VPC release (production migration)</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 2</span>
+            <span><strong>Target</strong> September 4, 2026</span>
+          </div>
+          <p>Move existing VPC customers to AM 2.0 in production.</p>
+          <ul class="req-list">
+            <li>Existing VPC customers on AM 2.0 (e.g. BMW, AstraZeneca, Mercedes)</li>
+            <li>All new customers onboarded to AM 2.0</li>
+          </ul>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>AM 2.0 public cloud release</h4>
+            <span class="badge badge-p1">P1</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> Public cloud</span>
+            <span><strong>Team</strong> Team 2</span>
+            <span><strong>Target</strong> Q1 2027</span>
+          </div>
+          <p>GA of AM 2.0 for public cloud users with self-service.</p>
+          <ul class="req-list">
+            <li>Single-asset RBAC and sharing on public cloud</li>
+            <li>Public AM 2.0 GA — self-service available</li>
+          </ul>
+          <p class="risk-inline"><strong>Risk:</strong> With reduced staffing, public launch may slip to <strong>2027</strong> (already Q1 2027 in plan).</p>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>AM 1.0 end of life</h4>
+            <span class="badge badge-p2">P2</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> All</span>
+            <span><strong>Team</strong> Team 1 &amp; 2</span>
+            <span><strong>Target</strong> Q2 2027</span>
+          </div>
+          <p>Deprecate AM 1.0 after migration completes.</p>
+          <ul class="req-list">
+            <li>AM 1.0 deprecated; all users on 2.0</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pillar: VPC / Asset Drive -->
+    <section class="pillar" id="vpc">
+      <h2 class="pillar-title">2 · Security, VPC &amp; on-prem (Asset Drive)</h2>
+      <div class="deliverables">
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>Admin portal (VPC parity)</h4>
+            <span class="badge badge-p1">P1</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 1</span>
+            <span><strong>Target</strong> June 30, 2026</span>
+          </div>
+          <p>Consolidated admin for private cloud — mitigates Unity Dashboard gaps on VPC and aligns with public-cloud admin capabilities.</p>
+          <ul class="req-list">
+            <li>Parity for org management, seats, RBAC, etc.</li>
+            <li>Multi-org management on VPC</li>
+            <li>User groups for VPC</li>
+            <li>Project deletion for VPC</li>
+            <li>Usage analytics exposed to customers</li>
+          </ul>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>On-prem deployability — VPCTL</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 1</span>
+            <span><strong>Target</strong> May 30, 2026</span>
+          </div>
+          <p>New deployment path using <strong>VPCTL</strong> (Go scripts) to simplify VPC/on-prem rollout.</p>
+          <ul class="req-list">
+            <li>VPCTL delivered to <strong>Mercedes</strong> for VPC</li>
+            <li>VPCTL delivered to <strong>BAH</strong> (Tyndall Air Force Base)</li>
+          </ul>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>Deployment framework (QA automation)</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 1</span>
+            <span><strong>Target</strong> June 1, 2026</span>
+          </div>
+          <p>Automate QA for VPC/on-prem to shrink the gap vs. public cloud releases.</p>
+          <ul class="req-list">
+            <li>Feature parity between public and private cloud</li>
+            <li>Lag between public and VPC deployments → <strong>1 day</strong></li>
+            <li>Reach deployment parity private vs. public</li>
+          </ul>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>SOC 2 Type II</h4>
+            <span class="badge badge-p1">P1</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> Public cloud</span>
+            <span><strong>Team</strong> N/A</span>
+            <span><strong>Target</strong> June 30, 2026</span>
+          </div>
+          <p>Certification published for enterprise trust requirements.</p>
+          <ul class="req-list">
+            <li>SOC 2 Type II available on trust.unity.com</li>
+          </ul>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>Unity Studio on VPC</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> (not specified in table)</span>
+            <span><strong>Target</strong> April 30, 2026</span>
+          </div>
+          <ul class="req-list">
+            <li>Unity Studio available on VPC</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pillar: PA & AT -->
+    <section class="pillar" id="upa">
+      <h2 class="pillar-title">3 · Pipeline automation &amp; Asset Transformer</h2>
+      <div class="deliverables">
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>Queuing system (UPA)</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 2 + Pipeline Automation</span>
+            <span><strong>Target</strong> June 30, 2026</span>
+          </div>
+          <p>Job queue for private cloud; migrate pipelines onto it.</p>
+          <ul class="req-list">
+            <li>Jobs do not fail when no AT SDK licenses — job pauses and waits</li>
+            <li>AT SDK licenses can be reserved for built-in pipelines so 3DDS pipelines do not stall the system</li>
+            <li>User-visible feedback when jobs fail</li>
+          </ul>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>Migrate built-in workflows to UPA</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> Public cloud &amp; VPC</span>
+            <span><strong>Team</strong> Team 3</span>
+            <span><strong>Target</strong> June 30, 2026</span>
+          </div>
+          <p>Move legacy transformation flows to extensible UPA.</p>
+          <ul class="req-list">
+            <li>GLB preview, metadata extraction, thumbnails, video transcoding, image resizing → UPA</li>
+            <li>Optimize &amp; Convert workflow on UPA</li>
+            <li>Built-ins exposed as Actions in AM or AT UPA apps</li>
+            <li>Licensing/pricing and guard rails (Part 3) implemented</li>
+          </ul>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>Asset Transformer ecosystem</h4>
+            <span class="badge badge-p2">P2</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> Public cloud &amp; VPC</span>
+            <span><strong>Team</strong> Team 4</span>
+            <span><strong>Target</strong> TBD</span>
+          </div>
+          <p>AT capabilities as customizable pipelines inside UPA.</p>
+          <ul class="req-list">
+            <li>Developer onboarding flows</li>
+            <li>Pipeline sharing; pipelines visible to Asset Manager</li>
+            <li>Author AT scripts in browser with live feedback on assets</li>
+          </ul>
+          <p class="risk-inline"><strong>Risk:</strong> Onboarding cost remains high (~<strong>$12k</strong> minimum buy-in per source).</p>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>Asset Transformer consumption SKU</h4>
+            <span class="badge badge-p1">P1</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> Public cloud only</span>
+            <span><strong>Team</strong> Team 3</span>
+            <span><strong>Target</strong> June 30, 2026</span>
+          </div>
+          <p>Usage-based pricing for AT SDK.</p>
+          <ul class="req-list">
+            <li>New consumption SKU for AT SDK</li>
+            <li>AT app in UPA on public cloud toggles consumption vs. licensed mode</li>
+          </ul>
+          <p class="risk-inline"><strong>Risk:</strong> Doc cites ~<strong>$24k</strong> minimum buy-in for developers &amp; deployment — onboarding friction.</p>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>Asset Transformer licensing (VPC)</h4>
+            <span class="badge badge-p1">P1</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 3</span>
+            <span><strong>Target</strong> TBD</span>
+          </div>
+          <ul class="req-list">
+            <li>Migrate AT licensing from FlexLM to Unity License Server</li>
+          </ul>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>New format support (HOOPS)</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Team 3</span>
+            <span><strong>Target</strong> TBD</span>
+          </div>
+          <ul class="req-list">
+            <li>Updated HOOPS version for new industry formats</li>
+          </ul>
+        </article>
+
+        <article class="deliverable">
+          <div class="deliverable-header">
+            <h4>AT licensing in Pipeline Automation</h4>
+            <span class="badge badge-p0">P0</span>
+          </div>
+          <div class="meta-row">
+            <span><strong>Surface</strong> VPC</span>
+            <span><strong>Team</strong> Pipeline Automation</span>
+            <span><strong>Target</strong> June 30, 2026</span>
+          </div>
+          <ul class="req-list">
+            <li>Correct license pooling and consumption tracking in the pipeline system</li>
+            <li>Admins add pooled licenses to orgs in private cloud</li>
+            <li>Pricing per linked framework</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <p class="footer-note"><a href="executive-summary.html">← Strategy &amp; KPIs</a> &nbsp;·&nbsp; <a href="index.html">Overview</a></p>
+  </main>
+</body>
+</html>
