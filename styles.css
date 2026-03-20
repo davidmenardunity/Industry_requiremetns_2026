@@ -179,6 +179,15 @@ body.is-presentation {
   color: #cbd5e1;
 }
 
+.slide .lead a {
+  color: #93c5fd;
+  font-weight: 500;
+}
+
+.slide .lead a:hover {
+  color: #e0f2fe;
+}
+
 .slide .wrap > p,
 .slide .pillar p,
 .slide .deliverable p {
@@ -297,6 +306,15 @@ body.is-presentation {
 
 .slide ul.clean li {
   color: #cbd5e1;
+}
+
+.slide ul.clean a {
+  color: #93c5fd;
+  font-weight: 500;
+}
+
+.slide ul.clean a:hover {
+  color: #e0f2fe;
 }
 
 .slide .callout {
@@ -550,6 +568,10 @@ h3 {
   font-size: 1.1rem;
   color: var(--text-muted);
   max-width: 65ch;
+}
+
+.lead.reference-doc {
+  margin-top: 1.25rem;
 }
 
 .grid-2 {
