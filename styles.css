@@ -574,6 +574,53 @@ h3 {
   margin-top: 1.25rem;
 }
 
+/* Strategy & KPIs — context + operational strategy block */
+.strategy-context-slide .strategy-operational {
+  margin-top: 1.5rem;
+  padding: 1.35rem 1.4rem 1.25rem;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: var(--radius);
+  border-left: 4px solid #3b82f6;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.slide .strategy-operational__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 1.95rem);
+  font-weight: 600;
+  margin: 0 0 1rem;
+  padding-bottom: 0;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: #f8fafc;
+  border-bottom: none;
+}
+
+.slide .strategy-operational__body p {
+  margin: 0 0 0.85rem;
+  font-size: 0.98rem;
+  line-height: 1.58;
+  color: #cbd5e1;
+}
+
+.slide .strategy-operational__body .strategy-lead {
+  font-size: 1.14rem;
+  line-height: 1.55;
+  color: #e2e8f0;
+  margin-bottom: 0.65rem;
+}
+
+.strategy-operational__list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.strategy-operational__list li {
+  margin: 0.5rem 0;
+  padding-left: 0.15rem;
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -914,6 +961,22 @@ ul.clean li {
   .slide h3,
   .slide .pillar-title {
     color: #0f172a !important;
+  }
+
+  .strategy-context-slide .strategy-operational {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-left: 4px solid #2563eb !important;
+    box-shadow: none !important;
+  }
+
+  .slide .strategy-operational__title {
+    color: #0f172a !important;
+  }
+
+  .slide .strategy-operational__body p,
+  .slide .strategy-operational__body .strategy-lead {
+    color: #334155 !important;
   }
 
   .slide .card,
