@@ -308,6 +308,25 @@ body.is-presentation {
   color: #cbd5e1;
 }
 
+.slide ul.clean li.kpi-highlight {
+  margin: 0.5rem -0.35rem;
+  padding: 0.55rem 0.75rem 0.55rem 0.95rem;
+  list-style-position: outside;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(251, 191, 36, 0.18) 0%,
+    rgba(251, 191, 36, 0.06) 45%,
+    transparent 100%
+  );
+  border-left: 3px solid #fbbf24;
+  box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.12);
+}
+
+.slide ul.clean li.kpi-highlight strong {
+  color: #fef3c7;
+}
+
 .slide ul.clean a {
   color: #93c5fd;
   font-weight: 500;
@@ -961,6 +980,17 @@ ul.clean li {
   .slide h3,
   .slide .pillar-title {
     color: #0f172a !important;
+  }
+
+  .slide ul.clean li.kpi-highlight {
+    background: #fffbeb !important;
+    border-left-color: #d97706 !important;
+    box-shadow: none !important;
+    color: #422006 !important;
+  }
+
+  .slide ul.clean li.kpi-highlight strong {
+    color: #92400e !important;
   }
 
   .strategy-context-slide .strategy-operational {
